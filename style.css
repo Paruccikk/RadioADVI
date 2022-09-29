@@ -115,9 +115,9 @@ main {
 }
 
 footer img {
-    margin: 30px;
-    width: 30px;
-    height: 35px;
+    margin: 20px;
+    width: 20px;
+    height: 25px;
 }
 
 footer {
@@ -126,6 +126,7 @@ footer {
 }
 
 footer a {
-margin: 18px;
+margin: 20px;
 text-align: center;
+color: black;
 }
