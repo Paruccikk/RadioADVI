@@ -118,12 +118,13 @@ main {
 footer img {
     margin: 20px;
     width: 20px;
-    height: 20px;
+    height: 25px;
 }
 
 footer {
     display: flex;
     justify-content: center;
+    height: 30;
 }
 
 footer a {
