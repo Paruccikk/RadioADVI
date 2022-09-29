@@ -61,6 +61,9 @@ main {
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
+    color: black;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .nav-list {
     position: absolute;
@@ -123,6 +126,6 @@ footer {
 }
 
 footer a {
-margin: 20px;
+margin: 18px;
 text-align: center;
 }
