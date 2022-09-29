@@ -33,6 +33,7 @@ main {
   background: url("/img/") no-repeat center center;
   background-size: cover;
   height: 92vh;
+  background-color: #fff;
 }
 
 .nav-list {
