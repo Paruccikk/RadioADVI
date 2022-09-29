@@ -124,7 +124,8 @@ footer img {
 footer {
     display: flex;
     justify-content: center;
-    height: 30;
+    height: 10;
+    width: 10;
 }
 
 footer a {
