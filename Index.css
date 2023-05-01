@@ -14,6 +14,11 @@ a:hover {
   opacity: 0.7;
 }
 
+header {
+  margin-bottom: -0px;
+}
+
+
 .center{
 
   text-align: center;
@@ -39,7 +44,7 @@ main {
   background: url("/img/") no-repeat center center;
   background-size: cover;
   height: 92vh;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .nav-list {
@@ -81,7 +86,7 @@ main {
   body {
     overflow-x: hidden;
     color: black;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
   }
   .nav-list {
@@ -138,7 +143,7 @@ main {
 footer {
   background-color: #f1f1f1;
   color: #000000;
-  padding: 40px;
+  padding: 20px;
   align-items: center;
 }
 
@@ -220,28 +225,28 @@ section {
 
 .category {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1px;
 }
 
 .category img {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
 }
 
 .category p {
   margin-top: 20px;
-  font-size: 1.0rem;
+  font-size: 0.5rem;
   font-weight: bold;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .category1 {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 80px;
+  height: 80px;
   margin: 50px;
   text-align: center;
 }
@@ -305,9 +310,9 @@ section {
 
 .btn-saiba-mais {
   display: inline-block;
-  background-color: #030200;
-  color: #dddada;
-  padding: 10px 20px;
+  background-color: #eeeef1b7;
+  color: #000000;
+  padding: 5px 5px;
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
@@ -316,4 +321,8 @@ section {
 
 .btn-saiba-mais:hover {
   background-color: #06032eb9;
+}
+
+body {
+  zoom: 0.9;
 }
