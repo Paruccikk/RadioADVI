@@ -326,3 +326,50 @@ section {
 body {
   zoom: 0.9;
 }
+
+
+
+
+
+
+
+
+
+#audioPlayer {
+  width: 20%;
+  margin-top: 20px;
+}
+
+/* Personalize os controles de áudio */
+#audioPlayer::-webkit-media-controls-panel {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Personalize os botões de controle */
+#audioPlayer::-webkit-media-controls-play-button {
+  background-color: #007bff; /* Azul */
+  border-radius: 10px;
+}
+
+#audioPlayer::-webkit-media-controls-play-button:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+  border-radius: 10px;
+}
+
+/* Personalize o tempo decorrido e total */
+#audioPlayer::-webkit-media-controls-current-time-display,
+#audioPlayer::-webkit-media-controls-time-remaining-display {
+  color: #007bff; /* Azul */
+  border-radius: 10px;
+}
+
+/* Personalize a barra de progresso */
+#audioPlayer::-webkit-media-controls-seek-back-button,
+#audioPlayer::-webkit-media-controls-seek-forward-button {
+  display: none; /* Remova os botões de avanço/retrocesso */
+}
+
+#audioPlayer::-webkit-media-controls-volume-slider {
+  display: none; /* Remova o controle de volume */
+}
