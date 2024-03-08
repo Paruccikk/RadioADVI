@@ -331,58 +331,37 @@ body {
 
 
 
-
-
-
-
-#audioPlayer {
+/* Estilos para o player de áudio */
+#audio-player {
   width: 100%;
-  margin-top: 20px;
-}
-
-/* Personalize os controles de áudio */
-#audioPlayer::-webkit-media-controls-panel {
-  background-color: #f0f0f0;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
   border-radius: 10px;
+  padding: 10px;
 }
 
-/* Personalize os botões de controle */
-#audioPlayer::-webkit-media-controls-play-button {
-  background-color: #007bff; /* Azul */
-  border-radius: 10px;
+/* Estilos para os controles do player de áudio */
+#audio-player-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-#audioPlayer::-webkit-media-controls-play-button:hover {
-  background-color: #0056b3; /* Azul mais escuro */
-  border-radius: 10px;
+/* Estilos para os botões de controle do player de áudio */
+#audio-player-controls button {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
 }
 
-/* Personalize o tempo decorrido e total */
-#audioPlayer::-webkit-media-controls-current-time-display,
-#audioPlayer::-webkit-media-controls-time-remaining-display {
-  color: #007bff; /* Azul */
-  border-radius: 10px;
+/* Estilos para o tempo de reprodução do player de áudio */
+#audio-player-controls span {
+  color: #333;
+  font-size: 14px;
 }
 
-/* Personalize a barra de progresso */
-#audioPlayer::-webkit-media-controls-seek-back-button,
-#audioPlayer::-webkit-media-controls-seek-forward-button {
-  display: none; /* Remova os botões de avanço/retrocesso */
-}
-
-#audioPlayer::-webkit-media-controls-volume-slider {
-  display: none; /* Remova o controle de volume */
-}
-
-
-.audio-player {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-#audioPlayer {
-  display: none;
-}
