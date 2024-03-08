@@ -373,3 +373,16 @@ body {
 #audioPlayer::-webkit-media-controls-volume-slider {
   display: none; /* Remova o controle de volume */
 }
+
+
+.audio-player {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#audioPlayer {
+  display: none;
+}
