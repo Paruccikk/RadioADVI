@@ -53,26 +53,12 @@
           <div>         
           <center>
 
-            <button id="playButton" onclick="toggleAudio()">Play</button>
-
-            <audio id="audioPlayer" controls autoplay>
-                <source src="http://stream.zeno.fm/8304sd5chuhvv" type="audio/mpeg">
-                Seu navegador não suporta a reprodução de áudio.
+            <audio id="meuPlayer" controls>
+              <source src="https://stream.zeno.fm/8304sd5chuhvv" type="audio/mp3">
+              Seu navegador não suporta o elemento de áudio.
             </audio>
-        
             
-            <script>
-                function toggleAudio() {
-                    var audio = document.getElementById("audioPlayer");
-                    if (audio.paused) {
-                        audio.play();
-                        document.getElementById("playButton").innerText = "Pause";
-                    } else {
-                        audio.pause();
-                        document.getElementById("playButton").innerText = "Play";
-                    }
-                }
-            </script>
+            
             
             
           </center>
