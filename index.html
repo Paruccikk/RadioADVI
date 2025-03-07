@@ -7,6 +7,8 @@
     <title> Rádio ADVI </title>
     <link rel="stylesheet" href="Index.css" />
     <link rel="icon" href="logo.png" type="image/x-icon">
+    <!-- Inclusão do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
@@ -25,136 +27,123 @@
       </nav>
     </header>
 
-
-      
-      <div class="footer-container">
+    <div class="footer-container">
       <div class="content">
-          
+        <center>
+          <header>
+            <br><br>
+            <h1> Rádio ADVI </h1>
+            <img src="logo.png" style="width: 100vw; max-width: 750px; height: auto; margin-top: 2px;">
+            <h2> A voz da Assembléia de Deus </h2>
+            <br><br>
+            <img src="microfone.jpg" style="width: 100vw; max-width: 100px; height: auto; margin-top: 2px;">
+            <br><br><br><br>
+          </header>
+        </center>
 
-
-          <center>
-            <header>
-              <br>
-              <br>
-              <h1> Rádio ADVI </h1>
-              <img src="logo.png" style="width: 100vw; max-width: 750px; height: auto; margin-top: 2px;">
-              <h2> A vóz da Assembléia de Deus </h2>
-              <br>
-              <br>
-              <img src="microfone.jpg" style="width: 100vw; max-width: 100px; height: auto; margin-top: 2px;">
-              <br>
-              <br>
-              <br>
-              <br>
-            </header>
-          </center>
-  
-
-            <div><center>
-
-              <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-              <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-              <script type="text/javascript">
-                MRP.insert({
-                'url':'http://stream.zeno.fm/8304sd5chuhvv',
-                'lang':'pt',
-                'codec':'mp3',
-                'volume':100,
-                'autoplay':true,
-                'jsevents':true,
-                'buffering':0,
-                'title':'Radio ADVI',
-                'wmode':'transparent',
-                'skin':'faredirfare',
-                'width':269,
-                'height':52
+        <div><center>
+          <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+          <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+          <script type="text/javascript">
+            MRP.insert({
+              'url':'https://player.colossocast.com.br/proxy/7724',
+              'lang':'pt',
+              'codec':'mp3',
+              'volume':100,
+              'autoplay':true,
+              'jsevents':true,
+              'buffering':0,
+              'title':'Radio ADVI',
+              'wmode':'transparent',
+              'skin':'faredirfare',
+              'width':269,
+              'height':52
             });
-        </script>
-        <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+          </script>
+          <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+        </div></center>
 
-            </div></center>
-
-             <br>
-             <br>
-             <br>
-             <br>
-<!-- BEGIN: Powered by Supercounters.com -->
-<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1664177,"fafafa","ff0000");</script><br><noscript><a href="https://www.supercounters.com/">free online counter</a></noscript>
-</center>
-<!-- END: Powered by Supercounters.com -->
-
-
-
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-
-             <div>
-
-              <a href="https://wa.me/5511918347391" class="whatsapp-btn" target="_blank">
-                <i src="Whats.png"></i>
-              </a>    
-  
-              <section>
-                <div class="category">
-                  <img src="Instagram.png" alt="Categoria 1">
-                  <br>
-                  <br>
-                  <a href="https://www.instagram.com/advilaindustrial/" class="btn-saiba-mais">Instagram</a>
-                  <br>
-                </div>
-                <div class="category">
-                  <img src="Facebook.png" alt="Categoria 2">
-                  <br>
-                  <br>
-                  <a href="https://www.facebook.com/advindustrial/" class="btn-saiba-mais">Facebook</a>
-                  <br>
-                </div>
-                <div class="category">
-                  <img src="PlayStore.png" alt="Categoria 3">
-                  <br>
-                  <br>
-                  <a href="https://play.google.com/store/apps/details?id=com.radioadvi.madureira&hl=en_US&gl=US" class="btn-saiba-mais">Play Store</a>
-                  <br>
-                </div>
-                <div class="category">
-                  <img src="Iphone.png" alt="Categoria 4">
-                  <br>
-                  <br>
-                  <a href="tutorial.html" class="btn-saiba-mais">Iphone</a>
-                  <br>
-                </div>
-              </section>
-  
+        <br><br>
+        
+        <center>
+          <div id="radio-info">
+            <!-- As informações da rádio serão exibidas aqui -->
           </div>
-               <br>
-               <br>
-               <br>
-               <br>
+        
+          <script type="text/javascript">
+            $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
+              console.log(data); // Verifica os dados recebidos
+              
+              var ouvintes_conectados = data.ouvintes_conectados; // Verifique a estrutura do JSON
+              var musica_atual = data.musica_atual; // Mostra a música atual
+                
+              // Exibe o número de ouvintes conectados e a música atual, e pinta a frase de vermelho
+              $('#radio-info').html(
+                '<h3 style="color: blue;">Música Atual: ' + musica_atual + '</h3>' +
+                '<h3 style="color: red;">Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
+                
+              );
+            }).fail(function() {
+              $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
+            });
+          </script>
+        </center>
 
-    <footer>
-      <div class="footer-top">
-        <div class="footer-logo">
-          <img src="logo.png" alt="Logo">
+        <br><br><br><br><br>
+
+        <div>
+          <a href="https://wa.me/5511918347391" class="whatsapp-btn" target="_blank">
+            <i src="Whats.png"></i>
+          </a>    
+
+          <section>
+            <div class="category">
+              <img src="Instagram.png" alt="Categoria 1">
+              <br><br>
+              <a href="https://www.instagram.com/advilaindustrial/" class="btn-saiba-mais">Instagram</a>
+              <br>
+            </div>
+            <div class="category">
+              <img src="Facebook.png" alt="Categoria 2">
+              <br><br>
+              <a href="https://www.facebook.com/advindustrial/" class="btn-saiba-mais">Facebook</a>
+              <br>
+            </div>
+            <div class="category">
+              <img src="PlayStore.png" alt="Categoria 3">
+              <br><br>
+              <a href="https://play.google.com/store/apps/details?id=com.radioadvi.madureira&hl=en_US&gl=US" class="btn-saiba-mais">Play Store</a>
+              <br>
+            </div>
+            <div class="category">
+              <img src="Iphone.png" alt="Categoria 4">
+              <br><br>
+              <a href="tutorial.html" class="btn-saiba-mais">Iphone</a>
+              <br>
+            </div>
+          </section>
         </div>
-        <div class="footer-contact">
-    <p>Desenvolvido por <a href="https://www.instagram.com/danielsparucci/" target="_blank"> @danielsparucci </a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Copyrigh ©2023-2024 Rádio ADVI . - Todos os direitos reservados.</p>
-      </div>
-    </footer>
 
-    <div class="footer-bottom"></div>
-  </div>
+        <br><br><br><br>
 
-  <script src="mobile-navbar.js"></script>
-</header>
-</body>
+        <footer>
+          <div class="footer-top">
+            <div class="footer-logo">
+              <img src="logo.png" alt="Logo">
+            </div>
+            <div class="footer-contact">
+              <p>Desenvolvido por <a href="https://www.instagram.com/danielsparucci/" target="_blank"> @danielsparucci </a></p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>Copyright ©2023-2024 Rádio ADVI . - Todos os direitos reservados.</p>
+          </div>
+        </footer>
+      </div>
+
+      <div class="footer-bottom"></div>
+    </div>
+
+    <script src="mobile-navbar.js"></script>
+  </body>
+</html>
