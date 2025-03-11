@@ -55,25 +55,15 @@
             'wmode':'transparent',
             'skin':'faredirfare',
             'width':269,
-            'height':52
+            'height':60
           });
         </script>
       </div>
-    </div>
+
     
 <center>
 
-<!-- Controle de Volume Separado
-<div id="volume-container">
-    <label for="volumeControl">Volume:</label>
-    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
-    <br>
-    <div class="controls">
-      <button id="muteButton">🔊 Mutar</button>
-    </div>
-</div>
 
- -->
     
 </center>
         <br><br>
@@ -83,25 +73,35 @@
             <h3 class="radio-title">🎶 Informações da Rádio</h3>
             <div id="radio-info" class="radio-info">Carregando...</div>
           </div>
-          
+        
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script type="text/javascript">
-            $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
-              console.log(data); // Verifica os dados recebidos
-              
-              var ouvintes_conectados = data.ouvintes_conectados; // Número de ouvintes
-              var musica_atual = data.musica_atual; // Música atual
-                
-              // Atualiza a interface com as informações da rádio
-              $('#radio-info').html(
-                '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
-                '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
-              );
-            }).fail(function() {
-              $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
-            });
+            function atualizarRadioInfo() {
+              $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
+                console.log(data); // Verifica os dados recebidos no console
+        
+                var ouvintes_conectados = data.ouvintes_conectados; // Número de ouvintes
+                var musica_atual = decodeURIComponent(escape(data.musica_atual)); // Música atual
+        
+                // Atualiza a interface com as informações da rádio
+                $('#radio-info').html(
+                  '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
+                  '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
+                );
+              }).fail(function() {
+                $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
+              });
+            }
+        
+            // Chama a função ao carregar a página
+            atualizarRadioInfo();
+        
+            // Atualiza as informações a cada 5 segundos
+            setInterval(atualizarRadioInfo, 5000);
           </script>
         </center>
+        
+        
         
         <br><br><br><br><br><br><br>
         
