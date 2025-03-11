@@ -9,6 +9,11 @@
     <link rel="icon" href="logo.png" type="image/x-icon">
     <!-- Inclusão do jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Meu App">
+    <link rel="apple-touch-icon" href="/Rádio ADVI.png">
   </head>
 
   <body>
@@ -116,9 +121,9 @@
 
         <div>
           <a href="https://wa.me/5511918347391" class="whatsapp-btn" target="_blank">
-            <i src="Whats.png"></i>
+            <img src="Whats.png" alt="WhatsApp">
           </a>    
-
+        
           <section>
             <div class="category">
               <a href="https://www.instagram.com/advilaindustrial/" target="_blank">
@@ -128,7 +133,7 @@
               <a href="https://www.instagram.com/advilaindustrial/" class="btn-saiba-mais" target="_blank">Instagram</a>
               <br>
             </div>
-          
+        
             <div class="category">
               <a href="https://www.facebook.com/advindustrial/" target="_blank">
                 <img src="Facebook.png" alt="Facebook">
@@ -137,7 +142,7 @@
               <a href="https://www.facebook.com/advindustrial/" class="btn-saiba-mais" target="_blank">Facebook</a>
               <br>
             </div>
-          
+        
             <div class="category">
               <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" target="_blank">
                 <img src="PlayStore.png" alt="Play Store">
@@ -146,16 +151,24 @@
               <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" class="btn-saiba-mais" target="_blank">Play Store</a>
               <br>
             </div>
-          
+        
             <div class="category">
-              <a href="tutorial.html">
-                <img src="Iphone.png" alt="iPhone">
-              </a>
-              <button id="install-btn" style="display: none;">Instalar App</button>
+              <img src="Iphone.png" alt="iPhone">
               <br><br>
-              <a href="tutorial.html" class="btn-saiba-mais">iPhone</a>
+              <button id="install-btn" class="btn-saiba-mais">iPhone</button>
               <br>
+        
+              <script>
+                document.getElementById('install-btn').addEventListener('click', function() {
+                  alert('Para instalar o app, toque no botão de compartilhamento (📤 seta para cima) no Safari e selecione "Adicionar à Tela de Início".');
+                });
+              </script>
             </div>
+          </section>
+        </div>
+        
+           
+
           </section>
           
         </div>
