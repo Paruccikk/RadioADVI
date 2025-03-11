@@ -86,8 +86,10 @@
                 // Atualiza a interface com as informações da rádio
                 $('#radio-info').html(
                   '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
+                  '<br>' + // Adiciona uma linha em branco
                   '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
                 );
+
               }).fail(function() {
                 $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
               });
