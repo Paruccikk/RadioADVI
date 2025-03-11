@@ -184,7 +184,7 @@ footer {
 
 
 a[target="_blank"] {
-  color: #da7b0e;
+  color: #000000ab;
 }
 
 
@@ -407,4 +407,146 @@ body {
 
 .styled-button:active {
   transform: scale(0.98);
+}
+
+
+.verse-container {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.verse-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.verse-text {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+ /* Estilização da seção da rádio */
+ .radio-container {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.radio-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.radio-info {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Botão estilizado para o chat */
+.styled-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.styled-button:hover {
+  background-color: #0056b3;
+}
+
+.radio-content {
+  text-align: center;
+  padding: 30px;
+}
+
+.radio-info h1, .radio-info h2 {
+  margin: 15px 0;
+  font-family: Arial, sans-serif;
+}
+
+.radio-logo {
+  width: 100%;
+  max-width: 350px; /* Aumentei o tamanho da logo */
+  margin: 15px 0;
+}
+
+.microphone-img {
+  width: 120px; /* Aumentei o tamanho do microfone */
+  margin-top: 15px;
+}
+
+.radio-player {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.radio-player iframe, .radio-player object, .radio-player embed {
+  width: 320px !important; /* Aumentei o tamanho do botão do player */
+  height: 80px !important;
+}
+
+
+.social-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.category {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 150px;
+}
+
+.category:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 100px;
+  height: auto;
+}
+
+.btn-saiba-mais {
+  display: inline-block;
+  background-color: #fcfcfc;
+  color: rgb(8, 0, 0);
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+  background-color: #185c8a;
 }

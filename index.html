@@ -32,146 +32,131 @@
       </nav>
     </header>
 
-    <div class="footer-container">
-      <div class="content">
-        <center>
-          <header>
-            <br><br>
-            <h1> Rádio ADVI </h1>
-            <img src="logo.png" style="width: 100vw; max-width: 750px; height: auto; margin-top: 2px;">
-            <h2> A voz da Assembléia de Deus </h2>
-            <br><br>
-            <img src="microfone.jpg" style="width: 100vw; max-width: 100px; height: auto; margin-top: 2px;">
-            <br><br><br><br>
-          </header>
-        </center>
-
-        <div><center>
-          <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-          <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-          <script type="text/javascript">
-            MRP.insert({
-              'url':'https://player.colossocast.com.br/proxy/7724',
-              'lang':'pt',
-              'codec':'mp3',
-              'volume':100,
-              'autoplay':true,
-              'jsevents':true,
-              'buffering':0,
-              'title':'Radio ADVI',
-              'wmode':'transparent',
-              'skin':'faredirfare',
-              'width':269,
-              'height':52
-            });
-          </script>
-          <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-        </div></center>
+    <div class="radio-content">
+      <div class="radio-info">
+        <h1>🎙️ Rádio ADVI</h1>
+        <img src="logo.png" alt="Logo Rádio ADVI" class="radio-logo">
+        <h2>📢 A Voz da Assembleia de Deus</h2>
+        <img src="microfone.jpg" class="microphone-img" alt="Microfone">
+      </div>
+    
+      <div class="radio-player">
+        <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+        <script type="text/javascript">
+          MRP.insert({
+            'url':'https://player.colossocast.com.br/proxy/7724',
+            'lang':'pt',
+            'codec':'mp3',
+            'volume':100,
+            'autoplay':true,
+            'jsevents':true,
+            'buffering':0,
+            'title':'Radio ADVI',
+            'wmode':'transparent',
+            'skin':'faredirfare',
+            'width':269,
+            'height':52
+          });
+        </script>
+      </div>
+    </div>
+    
 
         <br><br>
         
         <center>
-          <div id="radio-info">
-            <!-- As informações da rádio serão exibidas aqui -->
+          <div class="radio-container">
+            <h3 class="radio-title">🎶 Informações da Rádio</h3>
+            <div id="radio-info" class="radio-info">Carregando...</div>
           </div>
         
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script type="text/javascript">
             $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
               console.log(data); // Verifica os dados recebidos
               
-              var ouvintes_conectados = data.ouvintes_conectados; // Verifique a estrutura do JSON
-              var musica_atual = data.musica_atual; // Mostra a música atual
+              var ouvintes_conectados = data.ouvintes_conectados; // Número de ouvintes
+              var musica_atual = data.musica_atual; // Música atual
                 
-              // Exibe o número de ouvintes conectados e a música atual, e pinta a frase de vermelho
+              // Atualiza a interface com as informações da rádio
               $('#radio-info').html(
-                '<h3 style="color: blue;">Música Atual: ' + musica_atual + '</h3><br>' +
-                '<h3 style="color: red;">Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
-                
+                '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
+                '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
               );
             }).fail(function() {
               $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
             });
           </script>
         </center>
+        
+        <br><br><br><br><br><br><br>
+        
+        <center>
+          <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
+          <button type="button" class="styled-button" onclick="window.open('https://player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
+        </center>
+
+        
+        <br><br><br><br><br>
+        
+        
+        <center>
+          <div class="verse-container">
+            <h3 class="verse-title">📖 Versículo do Dia</h3>
+            <div id="dailyVersesWrapper" class="verse-text"></div>
+            <script async defer src="https://dailyverses.net/get/verse.js?language=arc"></script>
+          </div>
+        </center>
 
         <br><br><br>
-
-        <center>
-
-          <h3>Peça sua Música em nosso Chat</h3>
-          <br>
-          <button type="button" class="styled-button" onclick="window.open('https://player.colossocast.com.br/chat/7724', '_blank')">Chat</button>
-
-        
-        </center>
-
-        <br><br><br><br><br>
-
-        <center>
-          <h3> Versículo diário </h3><br>
-          <div id="dailyVersesWrapper"></div>
-          <script async defer src="https://dailyverses.net/get/verse.js?language=arc"></script>
-        </center>
-
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-        
-
-
         <div>
           <a href="https://wa.me/5511918347391" class="whatsapp-btn" target="_blank">
             <img src="Whats.png" alt="WhatsApp">
           </a>    
         
-          <section>
+          <section class="social-section">
             <div class="category">
               <a href="https://www.instagram.com/advilaindustrial/" target="_blank">
-                <img src="Instagram.png" alt="Instagram">
+                <img src="Instagram.png" alt="Instagram" class="social-icon">
               </a>
               <br><br>
               <a href="https://www.instagram.com/advilaindustrial/" class="btn-saiba-mais" target="_blank">Instagram</a>
               <br>
             </div>
-        
+          
             <div class="category">
               <a href="https://www.facebook.com/advindustrial/" target="_blank">
-                <img src="Facebook.png" alt="Facebook">
+                <img src="Facebook.png" alt="Facebook" class="social-icon">
               </a>
               <br><br>
               <a href="https://www.facebook.com/advindustrial/" class="btn-saiba-mais" target="_blank">Facebook</a>
               <br>
             </div>
-        
+          
             <div class="category">
               <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" target="_blank">
-                <img src="PlayStore.png" alt="Play Store">
+                <img src="PlayStore.png" alt="Play Store" class="social-icon">
               </a>
               <br><br>
               <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" class="btn-saiba-mais" target="_blank">Play Store</a>
               <br>
             </div>
-        
+          
             <div class="category">
-              <img src="Iphone.png" alt="iPhone">
+              <img src="Iphone.png" alt="iPhone" class="social-icon">
               <br><br>
               <button id="install-btn" class="btn-saiba-mais">iPhone</button>
               <br>
-        
-              <script>
-                document.getElementById('install-btn').addEventListener('click', function() {
-                  alert('Para instalar o app, toque no botão de compartilhamento (📤 seta para cima) no Safari e selecione "Adicionar à Tela de Início".');
-                });
-              </script>
             </div>
           </section>
-        </div>
-        
-           
-
-          </section>
           
-        </div>
+          <script>
+            document.getElementById('install-btn').addEventListener('click', function() {
+              alert('Para instalar o app, toque no botão de compartilhamento (📤 seta para cima) no Safari e selecione "Adicionar à Tela de Início".');
+            });
+          </script>
+          
+
 
         <br><br><br><br>
 
