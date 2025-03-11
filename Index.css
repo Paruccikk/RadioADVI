@@ -185,7 +185,11 @@ footer {
 
 a[target="_blank"] {
   color: #000000ab;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Deixa a fonte mais grossa */
 }
+
+
 
 
 
