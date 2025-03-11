@@ -1,12 +1,6 @@
-var audio = document.getElementById('meuPlayer');
-var playPauseBtn = document.getElementById('playPauseBtn');
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('Service Worker registrado'))
+      .catch(err => console.log('Erro ao registrar Service Worker', err));
+}
 
-playPauseBtn.addEventListener('click', function() {
-  if (audio.paused) {
-    audio.play();
-    playPauseBtn.innerHTML = 'Pause';
-  } else {
-    audio.pause();
-    playPauseBtn.innerHTML = 'Play';
-  }
-});
