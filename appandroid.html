@@ -61,18 +61,21 @@
       </div>
     </div>
     
-    <center>
-      <div class="player-container">
-        <iframe 
-            src="https://player.colossocast.com.br/player-sonic/7724" 
-            frameborder="0" 
-            allow="autoplay"
-            class="player-iframe">
-        </iframe>
+<center>
+
+<!-- Controle de Volume Separado
+<div id="volume-container">
+    <label for="volumeControl">Volume:</label>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    <br>
+    <div class="controls">
+      <button id="muteButton">🔊 Mutar</button>
     </div>
+</div>
+
+ -->
     
-  
-      </center>
+</center>
         <br><br>
         
         <center>
@@ -80,7 +83,7 @@
             <h3 class="radio-title">🎶 Informações da Rádio</h3>
             <div id="radio-info" class="radio-info">Carregando...</div>
           </div>
-        
+          
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script type="text/javascript">
             $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
