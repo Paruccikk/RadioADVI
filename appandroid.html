@@ -47,8 +47,29 @@
         <img src="microfone.jpg" class="microphone-img" alt="Microfone">
       </div>
     
+      
+      <center>
+      <br><br>
+      <h3 class="radio-title">🕐 Hora Certa 🕐</h3>
+      <br>
+      <div id="clock" class="clock"></div>
       <br>
 
+
+      <script>
+          const clock = document.getElementById("clock");
+          
+          function updateClock() {
+              const now = new Date();
+              const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+              clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
+          }
+          
+          setInterval(updateClock, 1000);
+          updateClock();
+      </script>
+      </center>
+      <br><br>
         <center>
           <div class="player-container">
 
@@ -59,42 +80,9 @@
               height="300"
               class="custom-player">
             </iframe>
-        </div>
-        
-        <br><br>
-        <h3 class="radio-title">🕐 Hora Certa 🕐</h3>
-        <br>
-        <div id="clock" class="clock"></div>
-        <br>
-        <script>
-            const clock = document.getElementById("clock");
-            
-            function updateClock() {
-                const now = new Date();
-                const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
-                clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
-            }
-            
-            setInterval(updateClock, 1000);
-            updateClock();
-        </script>
-</center>
 
-<br><br><br><br>
-        
-<center>
-  <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
-  <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
-</center>
-
-
-<br><br><br>
-        
-        <center>
-          <div class="radio-container">
-            <h3 class="radio-title">🎶 Informações da Rádio</h3>
             <div id="radio-info" class="radio-info">Carregando...</div>
-          </div>
+          
         
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script type="text/javascript">
@@ -107,8 +95,6 @@
         
                 // Atualiza a interface com as informações da rádio
                 $('#radio-info').html(
-                  '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
-                  '<br>' + // Adiciona uma linha em branco
                   '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
                 );
 
@@ -123,10 +109,18 @@
             // Atualiza as informações a cada 5 segundos
             setInterval(atualizarRadioInfo, 5000);
           </script>
+
+        </div>
+        
+        <br><br><br>
+
+
+        <center>
+          <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
+          <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
         </center>
-        
+
         <br><br><br><br>
-        
         
         <center>
           <div class="verse-container">
