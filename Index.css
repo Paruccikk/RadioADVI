@@ -652,7 +652,7 @@ section {
     border: 2px solid #90562E; /* Cor da borda */
     border-radius: 8px; /* Borda arredondada */
     display: block;
-    margin: 10px auto; /* Centraliza */
+    margin: 20px auto; /* Centraliza */
     width: 100%; /* Faz com que o iframe se ajuste ao container */
     max-width: 500px; /* Limita a largura máxima */
     aspect-ratio: 16 / 9; /* Mantém a proporção do player */
