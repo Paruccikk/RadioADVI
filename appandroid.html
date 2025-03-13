@@ -47,32 +47,50 @@
         <img src="microfone.jpg" class="microphone-img" alt="Microfone">
       </div>
     
-      <div class="radio-player">
-        <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-        <script type="text/javascript">
-          MRP.insert({
-            'url':'https://player.colossocast.com.br/proxy/7724',
-            'lang':'pt',
-            'codec':'mp3',
-            'volume':100,
-            'autoplay':true,
-            'jsevents':true,
-            'buffering':0,
-            'title':'Radio ADVI',
-            'wmode':'transparent',
-            'skin':'faredirfare',
-            'width':269,
-            'height':60
-          });
+      <br>
+
+        <center>
+          <div class="player-container">
+            <div class="controls">
+                <button id="playPauseBtn" class="player-button">▶</button>
+                <input id="volumeSlider" class="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
+            </div>
+            <div id="clock" class="clock"></div>
+        </div>
+        
+        <audio id="radio" src="https://player.colossocast.com.br/proxy/7724/;"></audio>
+        
+        <script>
+            const audio = document.getElementById("radio");
+            const button = document.getElementById("playPauseBtn");
+            const volumeSlider = document.getElementById("volumeSlider");
+            const clock = document.getElementById("clock");
+            
+            button.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    button.textContent = "⏸"; // Ícone de pausa
+                } else {
+                    audio.pause();
+                    button.textContent = "▶"; // Ícone de play
+                }
+            });
+    
+            volumeSlider.addEventListener("input", () => {
+                audio.volume = volumeSlider.value;
+            });
+    
+            function updateClock() {
+                const now = new Date();
+                const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+                clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
+            }
+            
+            setInterval(updateClock, 1000);
+            updateClock();
         </script>
-      </div>
-
-    
-<center>
-
-
-    
 </center>
+
         <br><br>
         
         <center>
