@@ -51,38 +51,23 @@
 
         <center>
           <div class="player-container">
-            <div class="controls">
-                <button id="playPauseBtn" class="player-button">▶</button>
-                <input id="volumeSlider" class="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
-            </div>
+
+            <iframe 
+              src="https://player.colossocast.com.br/player-premium-background/7724/WVVoU01HTklUVFpNZVRsNVdWZFNjR0l5Um10a2JXdDFaRzFXZVZreVZuTk1iVVozWTBNNWMySXlaSFpNYmtKMVduYzlQUT09KzM=/ffffff/10"
+              frameborder="0" 
+              width="500" 
+              height="300"
+              class="custom-player">
+            </iframe>
+
         </div>
         
         <br><br>
         <div id="clock" class="clock"></div>
         <br>
-        
-        <audio id="radio" src="https://player.colossocast.com.br/proxy/7724/;"></audio>
-        
         <script>
-            const audio = document.getElementById("radio");
-            const button = document.getElementById("playPauseBtn");
-            const volumeSlider = document.getElementById("volumeSlider");
             const clock = document.getElementById("clock");
             
-            button.addEventListener("click", () => {
-                if (audio.paused) {
-                    audio.play();
-                    button.textContent = "⏸"; // Ícone de pausa
-                } else {
-                    audio.pause();
-                    button.textContent = "▶"; // Ícone de play
-                }
-            });
-    
-            volumeSlider.addEventListener("input", () => {
-                audio.volume = volumeSlider.value;
-            });
-    
             function updateClock() {
                 const now = new Date();
                 const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };

@@ -639,8 +639,8 @@ section {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.753);
     transition: box-shadow 0.3s ease-in-out;
-    max-width: 270px;
-    width: 100%;
+    max-width: 500px;
+    width: 200%;
     text-align: center;
 }
 
@@ -648,38 +648,9 @@ section {
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
 }
 
-.controls {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.player-button {
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 24px;
-    color: #000;
-    transition: background 0.3s;
-}
-
-.player-button:hover {
-    background-color: #ccc;
-}
-
-.volume-slider {
-    width: 100px;
-    cursor: pointer;
-}
 
 .clock {
-  background: linear-gradient(135deg, #90562E, #C1AC9C);
+  background: linear-gradient(135deg, #b62b2b, #c19c9c);
   color: white;
   font-size: 22px;
   font-weight: bold;
@@ -694,7 +665,7 @@ section {
 }
 
 .clock:hover {
-  background: linear-gradient(135deg, #C1AC9C, #90562E);
+  background: linear-gradient(135deg, #c19d9c, #90392e);
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -703,3 +674,10 @@ section {
   transform: scale(0.98);
 }
 
+
+.custom-player {
+  border: 2px solid #90562E; /* Cor da borda */
+  border-radius: 8px; /* Borda arredondada */
+  display: block;
+  margin: 10px auto; /* Centraliza */
+}
