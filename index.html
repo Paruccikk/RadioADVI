@@ -32,6 +32,8 @@
       </nav>
     </header>
 
+    <br><br>
+
     <div class="radio-content">
       <div class="radio-info">
         <h1>🎙️ Rádio ADVI</h1>
@@ -40,43 +42,48 @@
         <img src="microfone.jpg" class="microphone-img" alt="Microfone">
       </div>
     
-
-      <br><br><br>
-
-      
-
-      <center>
-    <div class="player-container">
-
-          <iframe 
-            src="https://player.colossocast.com.br/player-premium-background/7724/WVVoU01HTklUVFpNZVRsNVdWZFNjR0l5Um10a2JXdDFaRzFXZVZreVZuTk1iVVozWTBNNWMySXlaSFpNYmtKMVduYzlQUT09KzM=/ffffff/10"
-            frameborder="0" 
-            width="500" 
-            height="300"
-            class="custom-player">
-          </iframe>
-    </div>
-
-      <br><br>
-
-            <div id="clock" class="clock"></div>
       <br>
 
-      <script>
-          const clock = document.getElementById("clock");
-          
-          function updateClock() {
-              const now = new Date();
-              const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
-              clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
-          }
-          
-          setInterval(updateClock, 1000);
-          updateClock();
-      </script>
+        <center>
+          <div class="player-container">
+
+            <iframe 
+              src="https://player.colossocast.com.br/player-premium-background/7724/WVVoU01HTklUVFpNZVRsNVdWZFNjR0l5Um10a2JXdDFaRzFXZVZreVZuTk1iVVozWTBNNWMySXlaSFpNYmtKMVduYzlQUT09KzM=/ffffff/10"
+              frameborder="0" 
+              width="500" 
+              height="300"
+              class="custom-player">
+            </iframe>
+        </div>
+        
+        <br><br>
+        <h3 class="radio-title">🕐 Hora Certa 🕐</h3>
+        <br>
+        <div id="clock" class="clock"></div>
+        <br>
+        <script>
+            const clock = document.getElementById("clock");
+            
+            function updateClock() {
+                const now = new Date();
+                const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+                clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
+            }
+            
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
 </center>
 
-        <br><br>
+<br><br><br><br>
+        
+<center>
+  <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
+  <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
+</center>
+
+
+<br><br><br>
         
         <center>
           <div class="radio-container">
@@ -113,17 +120,7 @@
           </script>
         </center>
         
-        
-        
-        <br><br><br><br><br><br><br>
-        
-        <center>
-          <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
-          <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
-        </center>
-
-        
-        <br><br><br><br><br>
+        <br><br><br><br>
         
         
         <center>
