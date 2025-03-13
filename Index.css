@@ -640,12 +640,22 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.753);
     transition: box-shadow 0.3s ease-in-out;
     max-width: 500px;
-    width: 200%;
+    width: 100%; /* Faz com que o container se ajuste automaticamente */
     text-align: center;
 }
 
 .player-container:hover {
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
+}
+
+.custom-player {
+    border: 2px solid #90562E; /* Cor da borda */
+    border-radius: 8px; /* Borda arredondada */
+    display: block;
+    margin: 10px auto; /* Centraliza */
+    width: 100%; /* Faz com que o iframe se ajuste ao container */
+    max-width: 500px; /* Limita a largura máxima */
+    aspect-ratio: 16 / 9; /* Mantém a proporção do player */
 }
 
 
@@ -674,10 +684,3 @@ section {
   transform: scale(0.98);
 }
 
-
-.custom-player {
-  border: 2px solid #90562E; /* Cor da borda */
-  border-radius: 8px; /* Borda arredondada */
-  display: block;
-  margin: 10px auto; /* Centraliza */
-}
