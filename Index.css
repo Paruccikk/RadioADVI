@@ -325,13 +325,6 @@ section {
   background-color: #06032eb9;
 }
 
-body {
-  zoom: 0.9;
-}
-
-
-
-
 
 /* Estilos para o player de áudio */
 #audio-player {
@@ -641,12 +634,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0000000e;
-    padding: 10px;
+    background-color: #00000007;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.562);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.753);
     transition: box-shadow 0.3s ease-in-out;
-    max-width: 250px;
+    max-width: 270px;
     width: 100%;
     text-align: center;
 }
@@ -658,7 +651,7 @@ body {
 .controls {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .player-button {
@@ -666,7 +659,7 @@ body {
     border: none;
     border-radius: 50%;
     width: 60px;
-    height: 60px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -686,8 +679,27 @@ body {
 }
 
 .clock {
-    margin-top: 15px;
-    color: rgb(15, 15, 15);
-    font-size: 18px;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #90562E, #C1AC9C);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: center;
 }
+
+.clock:hover {
+  background: linear-gradient(135deg, #C1AC9C, #90562E);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clock:active {
+  transform: scale(0.98);
+}
+

@@ -40,32 +40,53 @@
         <img src="microfone.jpg" class="microphone-img" alt="Microfone">
       </div>
     
-      <div class="radio-player">
-        <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-        <script type="text/javascript">
-          MRP.insert({
-            'url':'https://player.colossocast.com.br/proxy/7724',
-            'lang':'pt',
-            'codec':'mp3',
-            'volume':100,
-            'autoplay':true,
-            'jsevents':true,
-            'buffering':0,
-            'title':'Radio ADVI',
-            'wmode':'transparent',
-            'skin':'faredirfare',
-            'width':269,
-            'height':60
-          });
-        </script>
+
+      <br><br><br>
+      <center>
+        <div class="player-container">
+          <div class="controls">
+              <button id="playPauseBtn" class="player-button">▶</button>
+              <input id="volumeSlider" class="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
+          </div>
       </div>
-
-    
-<center>
-
-
-    
+      
+      <br><br><br>
+      <div id="clock" class="clock"></div>
+      <br>
+      
+      <audio id="radio" src="https://player.colossocast.com.br/proxy/7724/;"></audio>
+      
+      <script>
+          const audio = document.getElementById("radio");
+          const button = document.getElementById("playPauseBtn");
+          const volumeSlider = document.getElementById("volumeSlider");
+          const clock = document.getElementById("clock");
+          
+          button.addEventListener("click", () => {
+              if (audio.paused) {
+                  audio.play();
+                  button.textContent = "⏸"; // Ícone de pausa
+              } else {
+                  audio.pause();
+                  button.textContent = "▶"; // Ícone de play
+              }
+          });
+  
+          volumeSlider.addEventListener("input", () => {
+              audio.volume = volumeSlider.value;
+          });
+  
+          function updateClock() {
+              const now = new Date();
+              const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+              clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
+          }
+          
+          setInterval(updateClock, 1000);
+          updateClock();
+      </script>
 </center>
+
         <br><br>
         
         <center>
@@ -86,8 +107,10 @@
                 // Atualiza a interface com as informações da rádio
                 $('#radio-info').html(
                   '<h3 style="color: blue;">🎵 Música Atual: ' + musica_atual + '</h3>' +
+                  '<br>' + // Adiciona uma linha em branco
                   '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
                 );
+
               }).fail(function() {
                 $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
               });
@@ -107,7 +130,7 @@
         
         <center>
           <h3 class="radio-title">💬 Peça sua Música no Chat</h3>
-          <button type="button" class="styled-button" onclick="window.open('https://player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
+          <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
         </center>
 
         
