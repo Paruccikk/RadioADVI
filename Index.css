@@ -636,27 +636,32 @@ section {
     align-items: center;
     background-color: #00000007;
     padding: 20px;
+    padding-left: 10px; /* Espaço extra na esquerda */
+    padding-right: 10px; /* Espaço extra na direita */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.753);
     transition: box-shadow 0.3s ease-in-out;
     max-width: 500px;
-    width: 100%; /* Faz com que o container se ajuste automaticamente */
+    width: 90%; /* Evita que o container ocupe toda a largura da tela */
+    margin: 0 auto; /* Centraliza o container na tela */
     text-align: center;
-}
-
-.player-container:hover {
-    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
 }
 
 .custom-player {
     border: 2px solid #90562E; /* Cor da borda */
     border-radius: 8px; /* Borda arredondada */
     display: block;
-    margin: 20px auto; /* Centraliza */
-    width: 100%; /* Faz com que o iframe se ajuste ao container */
+    margin: 10px auto; /* Mantém o player centralizado */
+    width: 100%; /* Ajusta a largura automaticamente */
     max-width: 500px; /* Limita a largura máxima */
     aspect-ratio: 16 / 9; /* Mantém a proporção do player */
 }
+
+
+.player-container:hover {
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
+}
+
 
 
 .clock {
