@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title> Rádio ADVI </title>
+    <link rel="stylesheet" href="public/css/Index.css" />
+    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <!-- Inclusão do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Meu App">
+    <link rel="apple-touch-icon" href="imagens/Rádio ADVI.png">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="index.html"> Rádio ADVI </a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <br><br><center>
+    <div class="button-container">
+      <button type="button" class="styled-button" onclick="window.location.href='index.html'">Início</button>
+      <button type="button" class="styled-button" onclick="window.location.href='contato.html'">Contato</button>
+    </div>
+  </center>
+
+    <div class="radio-content">
+      <div class="radio-info">
+        <h1>🎙️ Rádio ADVI</h1>
+        <img src="imagens/logo.png" alt="Logo Rádio ADVI" class="radio-logo">
+        <h3>📢 A Voz da Assembleia de Deus</h3>
+        <img src="imagens/microfone.jpg" class="microphone-img" alt="Microfone">
+      </div>
+    
+      
+      <center>
+      <br><br>
+      <h3 class="radio-title">🕐 Hora Certa 🕐</h3>
+      <br>
+      <div id="clock" class="clock"></div>
+      <br>
+
+
+      <script>
+          const clock = document.getElementById("clock");
+          
+          function updateClock() {
+              const now = new Date();
+              const options = { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+              clock.textContent = new Intl.DateTimeFormat("pt-BR", options).format(now);
+          }
+          
+          setInterval(updateClock, 1000);
+          updateClock();
+      </script>
+      </center>
+      <br><br>
+        <center>
+          <div class="player-container">
+
+            <iframe 
+              src="https://player.colossocast.com.br/player-premium-background/7724/WVVoU01HTklUVFpNZVRsNVdWZFNjR0l5Um10a2JXdDFaRzFXZVZreVZuTk1iVVozWTBNNWMySXlaSFpNYmtKMVduYzlQUT09KzM=/ffffff/10"
+              frameborder="0" 
+              width="500" 
+              height="300"
+              class="custom-player">
+            </iframe>
+
+            <div id="radio-info" class="radio-info">Carregando...</div>
+          
+        
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script type="text/javascript">
+            function atualizarRadioInfo() {
+              $.getJSON('https://colossocast.com.br/api-json/TnpjeU5BPT0rWg==', function(data) {
+                console.log(data); // Verifica os dados recebidos no console
+        
+                var ouvintes_conectados = data.ouvintes_conectados; // Número de ouvintes
+                var musica_atual = decodeURIComponent(escape(data.musica_atual)); // Música atual
+        
+                // Atualiza a interface com as informações da rádio
+                $('#radio-info').html(
+                  '<h3 style="color: red;">👥 Ouvintes Conectados: ' + ouvintes_conectados + '</h3>'
+                );
+
+              }).fail(function() {
+                $('#radio-info').html('<h3 style="color: red;">Erro ao carregar as informações da rádio.</h3>');
+              });
+            }
+        
+            // Chama a função ao carregar a página
+            atualizarRadioInfo();
+        
+            // Atualiza as informações a cada 5 segundos
+            setInterval(atualizarRadioInfo, 5000);
+          </script>
+
+        </div>
+        
+        <br><br><br>
+
+
+        <center>
+          <h3 class="radio-title">💬 Peça sua Música ♫ </h3>
+          <button type="button" class="styled-button" onclick="window.open('//player.colossocast.com.br/chat/7724', '_blank')">Acessar Chat</button>
+        </center>
+
+        <br><br><br><br>
+        
+        <center>
+          <div class="verse-container">
+            <h3 class="verse-title">📖 Versículo do Dia</h3>
+            <div id="dailyVersesWrapper" class="verse-text"></div>
+            <script async defer src="https://dailyverses.net/get/verse.js?language=arc"></script>
+          </div>
+        </center>
+
+        <br><br><br><br>
+
+        <div class="radio-content">
+          <h3 class="verse-title">🌐 Redes Sociais 🌐 </h3>
+        </div>
+
+        
+        <div>
+          <a href="https://wa.me/5511918347391" class="whatsapp-btn" target="_blank">
+            <img src="imagens/Whats.png" alt="WhatsApp">
+          </a>    
+        
+          <section class="social-section">
+            <div class="category">
+              <a href="https://www.instagram.com/advilaindustrial/" target="_blank">
+                <img src="imagens/Instagram.png" alt="Instagram" class="social-icon">
+              </a>
+              <br><br>
+              <a href="https://www.instagram.com/advilaindustrial/" class="btn-saiba-mais" target="_blank">Instagram</a>
+              <br>
+            </div>
+          
+            <div class="category">
+              <a href="https://www.facebook.com/advindustrial/" target="_blank">
+                <img src="imagens/Facebook.png" alt="Facebook" class="social-icon">
+              </a>
+              <br><br>
+              <a href="https://www.facebook.com/advindustrial/" class="btn-saiba-mais" target="_blank">Facebook</a>
+              <br>
+            </div>
+          
+            <div class="category">
+              <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" target="_blank">
+                <img src="imagens/PlayStore.png" alt="Play Store" class="social-icon">
+              </a>
+              <br><br>
+              <a href="https://play.google.com/store/apps/details?id=com.parucci.radioadvi&hl=en_US&gl=US" class="btn-saiba-mais" target="_blank">Play Store</a>
+              <br>
+            </div>
+          
+            <div class="category">
+              <img src="imagens/Iphone.png" alt="iPhone" class="social-icon">
+              <br><br>
+              <button id="install-btn" class="btn-saiba-mais">iPhone</button>
+              <br>
+            </div>
+          </section>
+          
+          <script>
+            document.getElementById('install-btn').addEventListener('click', function() {
+              alert('Para instalar o app, toque no botão de compartilhamento (📤 seta para cima) no Safari e selecione "Adicionar à Tela de Início".');
+            });
+          </script>
+          
+
+
+        <br><br><br><br>
+
+        <footer>
+          <div class="footer-container">
+            <div class="footer-top">
+              <div class="footer-logo">
+                <img src="imagens/logo.png" alt="Logo">
+              </div>
+              <div class="footer-contact">
+                <p>Desenvolvido por 
+                  <a href="https://www.instagram.com/dannielparucci/" target="_blank">@dannielparucci</a>
+                </p>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2023-2025 Rádio ADVI - Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </footer>
+       
+
+    <script src="public/js/mobile-navbar.js"></script>
+    <script src="public/js/script.js"></script>
+  </body>
+</html>

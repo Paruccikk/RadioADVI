@@ -1,0 +1,38 @@
+{
+    "name": "Rádio ADVI",
+    "short_name": "ADVI",
+    "description": "Ouça a Rádio ADVI em qualquer lugar!",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#1c1c1c",
+    "theme_color": "#ffcc00",
+    "icons": [
+      {
+        "src": "/icons/iconeapp192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/iconeapp512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/screenshot1.jpeg",
+        "sizes": "1080x1920",
+        "type": "image/png",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/screenshots/screenshot2.jpeg",
+        "sizes": "1920x1080",
+        "type": "image/png",
+        "form_factor": "wide"
+      }
+    ]
+  }
+  
